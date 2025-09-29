@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yc"
+version = "0.0.1"
+description = "YC's specialized tools"
+requires-python = ">=3.8"
+readme = "README.md"
+authors = [{name = 'yuchao', email = "254712088@csu.edu.cn"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = ["matplotlib"]
+
+[project.urls]
+Homepage = "https://github.com/billiemetry/yc"
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
