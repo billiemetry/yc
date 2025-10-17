@@ -11,6 +11,11 @@ def load_loss_from_trainer_state(path):
     return loss
 
 def llavaplot(directory, destination, **kwargs):
+    if kwargs.get('step_pretrain',None) == None: kwargs['step_pretrain'] = 15
+    if kwargs.get('start_pretrain',None) == None: kwargs['start_pretrain'] = 100
+    if kwargs.get('step_lora', None) == None: kwargs['step_lora'] = 25
+    if kwargs.get('start_lora', None) == None: kwargs['start_lora'] = 100
+
     def get_name(path):
         from pathlib import Path
         path = Path(path)
